@@ -11,7 +11,7 @@ RUN cd; apt update && apt upgrade -y && apt install -y git wget flex bison build
   pip3 install numpy
 
 # install rdkit
-RUN git clone -b Release_2016_03_3 https://github.com/rdkit/rdkit /rdkit && cd rdkit && mkdir build &&\
+RUN git clone -b Release_2016_03_4 https://github.com/rdkit/rdkit /rdkit && cd rdkit && mkdir build &&\
   cd build && mkdir -p /rdkit/External/java_lib && wget -O /rdkit/External/java_lib/junit.jar \
     "http://search.maven.org/remotecontent?filepath=junit/junit/4.10/junit-4.10.jar" &&\
   export JAVA_HOME=/usr/lib/jvm/java-8-oracle && cmake .. \
